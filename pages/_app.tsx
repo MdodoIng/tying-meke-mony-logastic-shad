@@ -10,13 +10,12 @@ import { AnimatePresence } from 'framer-motion';
 import '/styles/globals.css';
 import 'styles/dist.css';
 import { isBrowser, useScrollRestoration } from '@/lib/helpers';
-import React, { useContext, useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { Router } from 'next/router';
 import { pageTransitionSpeed } from '@/lib/motion';
 import { useRouter } from 'next/navigation';
 import { AppProps } from 'next/app';
 import Layout from 'components/layout/layout';
-import Image from 'next/image';
 
 if (isBrowser) {
   console.groupCollapsed(

@@ -1,9 +1,11 @@
 import Head from 'next/head';
+import Script from 'next/script';
 import React from 'react';
 
 const HeadSEO = ({ site = {}, page = {}, schema }: any) => {
   return (
     <Head>
+
       <meta charSet="utf-8" />
       <meta name="description" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
