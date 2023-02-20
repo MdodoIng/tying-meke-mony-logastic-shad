@@ -7,11 +7,10 @@ const HeadSEO = ({ site = {}, page = {}, schema }: any) => {
     <Head>
 
       <meta charSet="utf-8" />
-      <meta name="description" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="format-detection" content="telephone=no" />
-
+      <meta name="description" content="Discover our top-quality exports and unparalleled customer service. As a trusted exporting company, we pride ourselves on delivering excellence in every shipment. Browse our extensive range of products today and experience the difference." />
       <link rel="icon" href="redbg.svg" sizes="any" />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
