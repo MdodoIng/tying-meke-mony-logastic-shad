@@ -5,12 +5,14 @@ import React from 'react';
 const HeadSEO = ({ site = {}, page = {}, schema }: any) => {
   return (
     <Head>
-
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="format-detection" content="telephone=no" />
-      <meta name="description" content="Discover our top-quality exports and unparalleled customer service. As a trusted exporting company, we pride ourselves on delivering excellence in every shipment. Browse our extensive range of products today and experience the difference." />
+      <meta
+        name="description"
+        content="Discover our top-quality exports and unparalleled customer service. As a trusted exporting company, we pride ourselves on delivering excellence in every shipment. Browse our extensive range of products today and experience the difference."
+      />
       <link rel="icon" href="redbg.svg" sizes="any" />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,6 +41,23 @@ const HeadSEO = ({ site = {}, page = {}, schema }: any) => {
         referrerPolicy="no-referrer"
       />
       <script src="https://cdn.tailwindcss.com" />
+
+      {/*  */}
+
+      <meta charSet="utf-8" />
+      <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta name="format-detection" content="telephone=no" />
+      <link rel="icon" href="../../assets/icons/icon.png" sizes="any" />
+
+      <link rel="apple-touch-icon" href="../../assets/icons/icon.png" />
+      <meta property="og:description" content="Discover our top-quality exports and unparalleled customer service. As a trusted exporting company, we pride ourselves on delivering excellence in every shipment. Browse our extensive range of products today and experience the difference." />
+      <meta name="twitter:description" content="Discover our top-quality exports and unparalleled customer service. As a trusted exporting company, we pride ourselves on delivering excellence in every shipment. Browse our extensive range of products today and experience the difference." />
+      <meta property="og:image" content="../../assets/icons/icon.png" />
+      <meta name="twitter:image" content="../../assets/icons/icon.png" />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="og:site_name" content="Aldan international" />
     </Head>
   );
 };
