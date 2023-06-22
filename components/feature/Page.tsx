@@ -1,3 +1,4 @@
+"use client"
 import { Bottom } from './Bottom';
 import Top from './Top';
 import { usePathname } from 'next/navigation';
