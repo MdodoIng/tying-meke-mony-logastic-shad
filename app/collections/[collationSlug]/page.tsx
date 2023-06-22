@@ -1,3 +1,4 @@
+"use client"
 import { productsData } from '@/lib/products';
 import CollationSlug from 'components/collections/[collationSlug]/collationSlug';
 import Image from 'next/image';
