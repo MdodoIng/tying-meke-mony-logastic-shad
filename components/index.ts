@@ -8,7 +8,6 @@ import DealsOfTheDay from './deals/Page';
 import FooterProducts from './footerProducts/page';
 import Feathers from './feature/Page';
 import Footer from './footer/Page';
-import Collations from './collections/Collations';
 import collationSlug from './collections/[collationSlug]/collationSlug';
 import ProductDetails from './[products]';
 import About from './about';
@@ -25,7 +24,6 @@ export {
   FooterProducts,
   Feathers,
   Footer,
-  Collations,
   collationSlug,
   ProductDetails,
   About,
