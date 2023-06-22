@@ -77,7 +77,7 @@ const PopularProducts = (): any => {
       </div>
 
       <div className="flex w-full flex-row justify-start gap-5 overflow-x-scroll md:grid md:grid-cols-3 md:flex-wrap  md:overflow-visible lg:grid-cols-5">
-        {isproductData?.map((item: Props, idx: React.Key) => (
+        {isproductData?.map((item: Props, idx: any) => (
           <React.Fragment key={item.id}>
             {idx <= 6 && (
               <OneProductWithOffer
