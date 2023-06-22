@@ -5,9 +5,6 @@ import {
   PopularProducts,
   DealsOfTheDay,
   FooterProducts,
-  Collations,
-  ProductDetails,
-  About,
   Contact,
 } from 'components';
 import CollationSlug from 'components/collections/[collationSlug]/collationSlug';
