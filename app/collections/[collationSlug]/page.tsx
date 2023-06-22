@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 
 
 
-const index = (): JSX.Element => {
+const Page = (): JSX.Element => {
   const pathname = usePathname();
 
   const productsCatogory = productsData.filter(
@@ -40,4 +40,4 @@ const index = (): JSX.Element => {
   );
 };
 
-export default index;
+export default Page;

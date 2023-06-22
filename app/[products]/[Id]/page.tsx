@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 
-const index = (): JSX.Element => {
+const Page = (): JSX.Element => {
   const pathname = usePathname();
 
   const productID = pathname
@@ -44,4 +44,4 @@ const index = (): JSX.Element => {
   );
 };
 
-export default index;
+export default Page;

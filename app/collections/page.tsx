@@ -12,6 +12,7 @@ import Image from 'next/image';
 let PageSize = 9;
 const Collations = (): any => {
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const pathname = usePathname()
 
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
@@ -38,7 +39,7 @@ const Collations = (): any => {
             >
               <Link
                 aria-label="Read more"
-                href={`${usePathname()}/${item.slug}`}
+                href={`${pathname}/${item.slug}`}
               >
                 <div className="grid place-content-center">
                   <Image
@@ -52,7 +53,7 @@ const Collations = (): any => {
               </Link>
               <Link
                 aria-label="Read more"
-                href={`${usePathname()}/${item.slug}`}
+                href={`${pathname}/${item.slug}`}
                 className="group/btn flex h-16 w-full items-center justify-start gap-3 rounded bg-gray-100 px-4 font-head text-base text-gray-800 duration-300 hover:text-emerald-500"
               >
                 {item.name}{' '}
