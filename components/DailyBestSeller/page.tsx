@@ -33,7 +33,7 @@ const DailyBestSeller = (): any => {
       setWindowWidth(window.innerWidth);
 
       return window.removeEventListener('resize', () =>
-        setWindowWidth(windowWidth),
+        setWindowWidth(window.innerWidth),
       );
     }
   }, []);

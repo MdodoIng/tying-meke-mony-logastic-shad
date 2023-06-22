@@ -30,7 +30,7 @@ const CollationSlug = ({ data }: any) => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageRange = firstPageIndex + PageSize;
     return data?.slice(firstPageIndex, lastPageRange);
-  }, [currentPage]);
+  }, [currentPage, data]);
 
   if (!data) return <Error statusCode={505} title="There is no prosucts" />;
   else
