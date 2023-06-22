@@ -12,10 +12,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-const Home = (data: {
-  sate: any | undefined;
-  page: any | undefined;
-}): JSX.Element => {
+const Home = (): JSX.Element => {
   const pathname = usePathname();
 
   if (!pathname) {

@@ -1,6 +1,5 @@
 "use client"
-import { Router } from 'next/router';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { pageController } from './pageController';
 import { productsData } from './products';
 
@@ -107,7 +106,7 @@ export function usePagination({
       let middleRange = range(leftSiblingIndex, rightSiblingIndex);
       return [firstPageIndex, DOTS, ...middleRange, DOTS, lastPageIndex];
     }
-  }, [totalCount, pageSize, siblingCount, currentPage]);
+  }, [totalCount, siblingCount, currentPage]);
 
   return paginationRange;
 }
