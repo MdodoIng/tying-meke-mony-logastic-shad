@@ -74,21 +74,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const Site = ({ children }: any): JSX.Element => {
-    return (
-      // <LazyMotion features={domAnimation}>
-      //   <AnimatePresence
-      //     mode="wait"
-      //     onExitComplete={() => {
-      //       document.body.classList.remove("overflow-hidden");
-      //     }}
-      //   >
-      <Layout>{children}</Layout>
-      //   </AnimatePresence>
-      // </LazyMotion>
-    );
-  };
-
   return (
     <html lang="en">
       <body
@@ -96,7 +81,7 @@ export default function RootLayout({
       >
         <SiteContextProvider>
           {" "}
-          <Site>{children}</Site>
+          <Layout>{children}</Layout>
         </SiteContextProvider>
       </body>
     </html>
