@@ -6,6 +6,7 @@ import { isBrowser } from "@/lib/helpers";
 
 import { lato, quicksand } from "@/lib/fonts";
 import { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -79,8 +80,21 @@ export default function RootLayout({
       <body
         className={`${lato.className} ${lato.variable} ${quicksand.variable}`}
       >
+        {/* Google tag (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-GKVHHDN8ZG"
+        />
+        <Script>
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-GKVHHDN8ZG');`}
+        </Script>
         <SiteContextProvider>
-          {" "}
+       
           <Layout>{children}</Layout>
         </SiteContextProvider>
       </body>
