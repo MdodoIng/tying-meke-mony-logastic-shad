@@ -7,6 +7,7 @@ import { isBrowser } from "@/lib/helpers";
 import { lato, quicksand } from "@/lib/fonts";
 import { Metadata } from "next";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: {
@@ -94,8 +95,8 @@ export default function RootLayout({
           gtag('config', 'G-GKVHHDN8ZG');`}
         </Script>
         <SiteContextProvider>
-       
           <Layout>{children}</Layout>
+          <Analytics />
         </SiteContextProvider>
       </body>
     </html>
