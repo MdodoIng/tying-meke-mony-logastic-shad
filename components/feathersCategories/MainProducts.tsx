@@ -1,7 +1,7 @@
-import { ButtonShopNow } from '@/ui/button';
-import { fracturedMainProduct } from '@/lib/data';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { ButtonShopNow } from "@/ui/button";
+import { fracturedMainProduct } from "@/lib/data";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const MainProducts: React.FC | any = () => {
   return (
@@ -21,8 +21,9 @@ const MainProducts: React.FC | any = () => {
             width={1000}
             height={1000}
             loading="lazy"
+            placeholder="blur"
+            blurDataURL="/banner.webp"
             src={item.picture}
-            layout="responsive"
             alt=""
             className="absolute right-0 bottom-0 z-0 max-h-[100%] w-full max-w-[50%] object-contain"
           />

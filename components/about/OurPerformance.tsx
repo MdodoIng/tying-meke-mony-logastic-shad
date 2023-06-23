@@ -36,6 +36,8 @@ const OurPerformance = () => (
               src={`/${item.smallPicture}`}
               alt="pic"
               loading="lazy"
+              placeholder="blur"
+              blurDataURL={item.smallPicture}
               className="h-full w-full object-cover"
             />
           </m.div>
@@ -67,6 +69,8 @@ const OurPerformance = () => (
               src={`/${item.bigPicture}`}
               alt="pic"
               loading="lazy"
+              placeholder="blur"
+              blurDataURL={item.smallPicture}
               className="h-full w-full object-cover "
             />
           </m.div>

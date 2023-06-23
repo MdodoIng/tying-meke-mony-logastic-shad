@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import BrowseAllButton from './BrowseAllButton';
-import { NavLAstInFeistBar, NavLAstInFeistBar2 } from './NavLAstInFeistBar';
-import SearchBar from './searchBar';
-import { motion } from 'framer-motion';
-import { textVariant2 } from '@/lib/motion';
-import { NavBigOptionsTab, NavBigOptions } from './NavBigOptions';
-import { footerSocialMedia } from '@/lib/data';
-import Link from 'next/link';
-import Image from 'next/image';
-import Cart from './Cart';
+import BrowseAllButton from "./BrowseAllButton";
+import { NavLAstInFeistBar, NavLAstInFeistBar2 } from "./NavLAstInFeistBar";
+import SearchBar from "./searchBar";
+import { motion } from "framer-motion";
+import { textVariant2 } from "@/lib/motion";
+import { NavBigOptionsTab, NavBigOptions } from "./NavBigOptions";
+import { footerSocialMedia } from "@/lib/data";
+import Link from "next/link";
+import Image from "next/image";
+import Cart from "./Cart";
 
 function Header(): any {
   const [isCart, setIsCart] = useState<boolean>(false);
   const [searchOption, setSearchOption] = useState<string | any>(
-    'All Catagories',
+    "All Catagories"
   );
   const [browseAllCategory, setBrowseAllCategory] = React.useState<
     Boolean | any
@@ -33,11 +33,11 @@ function Header(): any {
   };
 
   const classNameOfListInSearch =
-    'h-14 shrink-0 flex items-center text-gray-700 w-full font-head text-base  duration-300 hover:text-emerald-500';
+    "h-14 shrink-0 flex items-center text-gray-700 w-full font-head text-base  duration-300 hover:text-emerald-500";
 
   React.useEffect(() => {
     if (typeof window !== undefined) {
-      window.addEventListener('scroll', () => {
+      window.addEventListener("scroll", () => {
         const currentScrollPos = window.pageYOffset;
         if (currentScrollPos > 200) {
           setNavHide(true);
@@ -61,7 +61,7 @@ function Header(): any {
       }, 150);
     };
     if (typeof window !== undefined) {
-      window.addEventListener('scroll', () => scrollFunction());
+      window.addEventListener("scroll", () => scrollFunction());
     }
   }, []);
 
@@ -78,6 +78,8 @@ function Header(): any {
               width={106}
               height={100}
               loading="lazy"
+              placeholder="blur"
+              blurDataURL="/banner.webp"
               alt=""
               src="/namegreen.webp"
               className="h-[39px] w-full shrink-0  object-cover"
@@ -123,7 +125,7 @@ function Header(): any {
           whileInView="show"
           variants={textVariant2}
           className={`fixed ${
-            navHide ? 'flex' : 'hidden'
+            navHide ? "flex" : "hidden"
           } h-[60px] w-full items-center justify-between border-b-[1px] border-solid border-gray-700 border-opacity-20 bg-white py-2 px-4 duration-300`}
         >
           <BrowseAllButton
@@ -159,6 +161,8 @@ function Header(): any {
               height={100}
               alt=""
               loading="lazy"
+              placeholder="blur"
+              blurDataURL="/banner.webp"
               src="/namegreen.webp"
               className=" h-[35px] w-full shrink-0 cursor-pointer object-contain"
             />
@@ -171,18 +175,18 @@ function Header(): any {
         {/*  */}
         <div
           className={`${
-            browseAllCategory ? 'fixed' : 'hidden'
+            browseAllCategory ? "fixed" : "hidden"
           }   inset-0 z-50 flex min-h-screen w-full bg-black bg-opacity-25`}
         >
           <motion.div
             initial="hide"
-            animate={browseAllCategory ? 'show' : 'hide'}
+            animate={browseAllCategory ? "show" : "hide"}
             variants={{
               show: {
-                x: '0%',
+                x: "0%",
               },
               hide: {
-                x: '-100%',
+                x: "-100%",
               },
             }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}

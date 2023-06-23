@@ -1,9 +1,9 @@
-import { Icon } from '@/lib/icon';
-import React from 'react';
-import { ButtonAdd, ButtonAddToCart } from '@/ui/button';
-import { Rating } from '@/ui/rating';
-import RateOfProduct from '@/ui/rate';
-import Image from 'next/image';
+import { Icon } from "@/lib/icon";
+import React from "react";
+import { ButtonAdd, ButtonAddToCart } from "@/ui/button";
+import { Rating } from "@/ui/rating";
+import RateOfProduct from "@/ui/rate";
+import Image from "next/image";
 
 type Props = {
   id: React.Key;
@@ -32,6 +32,8 @@ function ProductWithTimer({
           width={1440}
           height={1000}
           loading="lazy"
+          placeholder="blur"
+          blurDataURL="/banner.webp"
           src={bgImage}
           alt=""
           className="min-h-full w-full object-cover"

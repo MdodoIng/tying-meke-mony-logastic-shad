@@ -34,8 +34,9 @@ const SmallIntroduction = () => (
               height={1080}
               src={`/${item.picture}`}
               loading="lazy"
-              alt=""
-              layout="responsive"
+              placeholder="blur"
+              blurDataURL={item.picture}
+              alt='aldan internation'
               className="h-full w-auto object-contain"
             />
           </m.div>

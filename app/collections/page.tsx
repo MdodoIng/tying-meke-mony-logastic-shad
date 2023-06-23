@@ -1,18 +1,18 @@
-"use client"
-import { BrowseAllCategories } from '@/lib/data';
-import { ArrowWithLine } from '@/lib/icon';
-import Pagination from '@/ui/Pagination';
-import Link from 'next/link';
-import React, { useMemo, useState } from 'react';
-import { domAnimation, LazyMotion, m } from 'framer-motion';
-import { fadeAnim } from '@/lib/motion';
-import { usePathname } from 'next/navigation';
-import Image from 'next/image';
+"use client";
+import { BrowseAllCategories } from "@/lib/data";
+import { ArrowWithLine } from "@/lib/icon";
+import Pagination from "@/ui/Pagination";
+import Link from "next/link";
+import React, { useMemo, useState } from "react";
+import { domAnimation, LazyMotion, m } from "framer-motion";
+import { fadeAnim } from "@/lib/motion";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 let PageSize = 9;
 const Collations = (): any => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
@@ -37,16 +37,16 @@ const Collations = (): any => {
               key={item.id}
               className=" flex h-[300px] w-full flex-col items-center justify-center"
             >
-              <Link
-                aria-label="Read more"
-                href={`${pathname}/${item.slug}`}
-              >
+              <Link aria-label="Read more" href={`${pathname}/${item.slug}`}>
                 <div className="grid place-content-center">
                   <Image
                     width={200}
                     height={200}
                     src={item.picture!}
                     alt={item.name}
+                    loading="lazy"
+                    placeholder="blur"
+                    blurDataURL={item.picture}
                     className="h-[200px] scale-[.9] object-contain duration-300 hover:scale-100"
                   />
                 </div>
@@ -56,7 +56,7 @@ const Collations = (): any => {
                 href={`${pathname}/${item.slug}`}
                 className="group/btn flex h-16 w-full items-center justify-start gap-3 rounded bg-gray-100 px-4 font-head text-base text-gray-800 duration-300 hover:text-emerald-500"
               >
-                {item.name}{' '}
+                {item.name}{" "}
                 <ArrowWithLine className="-m-3 scale-[.55] fill-gray-800 duration-300 group-hover/btn:fill-emerald-500" />
               </Link>
             </m.div>

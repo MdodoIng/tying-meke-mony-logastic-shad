@@ -1,17 +1,17 @@
-"use client"
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper';
-import { motion } from 'framer-motion';
-import { textVariant } from '@/lib/motion';
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper";
+import { motion } from "framer-motion";
+import { textVariant } from "@/lib/motion";
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import { Key } from 'react';
-import { homeComponentBig } from '@/lib/data';
-import { PaperPlaneIcon } from '@/lib/icon';
-import Image from 'next/image';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { Key } from "react";
+import { homeComponentBig } from "@/lib/data";
+import { PaperPlaneIcon } from "@/lib/icon";
+import Image from "next/image";
 
 const HomeComponent = (): any => {
   return (
@@ -21,7 +21,7 @@ const HomeComponent = (): any => {
         slidesPerView={1}
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000 }}
-        style={{ width: '100%', height: '100%' }}
+        style={{ width: "100%", height: "100%" }}
       >
         {homeComponentBig.map(
           (item: {
@@ -32,14 +32,15 @@ const HomeComponent = (): any => {
           }) => (
             <SwiperSlide
               key={item.id}
-              style={{ width: '100%', height: '100%' }}
+              style={{ width: "100%", height: "100%" }}
             >
               {/*  not in mobile  okay ithil ijj vallatum kalikkan nikkanda. i am the best coder */}
               <div className="relative z-auto hidden h-full content-center overflow-hidden rounded-3xl pl-20 md:grid">
                 <Image
                   fill
                   loading="eager"
-                  blurDataURL={item.picture}
+                  placeholder="blur"
+                  blurDataURL="/banner.webp"
                   className="absolute top-0 left-0 -z-10 h-full w-full object-cover"
                   src={item.picture}
                   alt="wallpaper"
@@ -90,7 +91,8 @@ const HomeComponent = (): any => {
                 <Image
                   fill
                   loading="eager"
-                  blurDataURL={item.picture}
+                  placeholder="blur"
+                  blurDataURL="/banner.webp"
                   className="absolute top-0 left-0 -z-10 h-full w-full object-cover"
                   src={item.picture}
                   alt="wallpaper"
@@ -117,7 +119,7 @@ const HomeComponent = (): any => {
                 </form>
               </div>
             </SwiperSlide>
-          ),
+          )
         )}
       </Swiper>
     </div>

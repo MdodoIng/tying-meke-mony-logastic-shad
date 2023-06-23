@@ -1,13 +1,13 @@
-'use client';
-import React from 'react';
-import Image from 'next/image';
+"use client";
+import React from "react";
+import Image from "next/image";
 const Footer = () => {
-  const [footerToggle, setFooterToggle] = React.useState<string | any>('');
+  const [footerToggle, setFooterToggle] = React.useState<string | any>("");
 
   const handleToggle = (prop: any) => {
     if (prop !== undefined) {
       if (footerToggle === prop) {
-        setFooterToggle('');
+        setFooterToggle("");
       } else setFooterToggle(prop);
     }
   };
@@ -20,6 +20,8 @@ const Footer = () => {
             width={100}
             height={100}
             loading="lazy"
+            placeholder="blur"
+            blurDataURL="/banner.webp"
             alt=""
             src="/namewhite.webp"
             className="h-[39px] w-full shrink-0 object-cover  "
@@ -62,13 +64,13 @@ const Footer = () => {
                   stroke-linejoin="round"
                 ></g>
                 <g id="SVGRepo_iconCarrier">
-                  {' '}
+                  {" "}
                   <path
                     d="M18.7881 14.7644C17.4497 13.4433 15.9296 15.1939 14.9258 16.1847C11.8965 16.7827 6.44379 11.4006 7.6555 9.00853C8.65932 8.01771 10.4328 6.51729 9.09441 5.1962C7.75599 3.87511 5.85724 3.60737 4.85342 4.59819C4.02037 5.42046 3.41451 7.21449 4.92915 11.1016C6.44379 14.9887 8.86722 17.3807 13.0072 19.0751C17.1473 20.7694 18.5609 19.7728 19.394 18.9505C20.3978 17.9597 20.1265 16.0855 18.7881 14.7644Z"
                     stroke="#000000"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                  ></path>{' '}
+                  ></path>{" "}
                 </g>
               </svg>
             </span>
@@ -98,26 +100,26 @@ const Footer = () => {
                   stroke-width="1.6320000000000001"
                 ></g>
                 <g id="SVGRepo_iconCarrier">
-                  {' '}
-                  <title>/svg/ic-mail</title> <desc>Created with Sketch.</desc>{' '}
-                  <defs> </defs>{' '}
+                  {" "}
+                  <title>/svg/ic-mail</title> <desc>Created with Sketch.</desc>{" "}
+                  <defs> </defs>{" "}
                   <g
                     id="Page-1"
                     stroke-width="0.00024000000000000003"
                     fill="none"
                     fill-rule="evenodd"
                   >
-                    {' '}
+                    {" "}
                     <g id="ic-mail" fill-rule="nonzero" fill="#000000">
-                      {' '}
+                      {" "}
                       <path
                         d="M21,7.41988177 L21,7.00247329 C21,6.45576096 20.5552407,6 20.0066023,6 L3.99339768,6 C3.44494629,6 3,6.44882258 3,7.00247329 L3,7.39176926 L11.4736665,10.8032231 C11.751932,10.9152513 12.3170143,10.9156063 12.5961616,10.8032231 L21,7.41988177 Z M21,9.57588042 L13.3430911,12.6585118 C12.5842636,12.9640118 11.4838475,12.9633206 10.7267369,12.6585118 L3,9.54776791 L3,16.9975267 C3,17.544239 3.44475929,18 3.99339768,18 L20.0066023,18 C20.5550537,18 21,17.5511774 21,16.9975267 L21,9.57588042 Z M1,7.00247329 C1,5.34831175 2.33627892,4 3.99339768,4 L20.0066023,4 C21.6637011,4 23,5.35495419 23,7.00247329 L23,16.9975267 C23,18.6516882 21.6637211,20 20.0066023,20 L3.99339768,20 C2.3362989,20 1,18.6450458 1,16.9975267 L1,7.00247329 Z"
                         id="Rectangle-23"
                       >
-                        {' '}
-                      </path>{' '}
-                    </g>{' '}
-                  </g>{' '}
+                        {" "}
+                      </path>{" "}
+                    </g>{" "}
+                  </g>{" "}
                 </g>
               </svg>
             </span>

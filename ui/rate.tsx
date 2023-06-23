@@ -1,10 +1,10 @@
 import React from 'react';
 
 const RateOfProduct = ({
-  rate,
+  rate = 0,
   offer = 0,
 }: {
-  rate: number;
+  rate?: number;
   offer?: number;
 }): JSX.Element => {
   return (

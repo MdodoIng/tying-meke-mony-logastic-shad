@@ -10,6 +10,8 @@ const Head = ({ headName, tags }: any): JSX.Element => {
         height={500}
         src="/banner.webp"
         loading="lazy"
+        placeholder="blur"
+        blurDataURL="/banner.webp"
         alt=""
         className="absolute top-0 right-0 -z-50 h-full w-full object-cover opacity-40"
       />

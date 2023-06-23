@@ -1,5 +1,5 @@
-import { PaperPlaneIcon } from 'lib/icon';
-import Image from 'next/image';
+import { PaperPlaneIcon } from "lib/icon";
+import Image from "next/image";
 
 const Top = ({ pathName }: any): JSX.Element => (
   <div className="relative z-10  block w-full overflow-hidden rounded-xl  p-8 md:p-10 lg:p-20">
@@ -8,6 +8,8 @@ const Top = ({ pathName }: any): JSX.Element => (
       height={1000}
       src="/banner.webp"
       loading="lazy"
+      placeholder="blur"
+      blurDataURL="/banner.webp"
       alt=""
       className="absolute top-0 right-0 -z-50 h-full w-full object-cover "
     />
@@ -15,12 +17,14 @@ const Top = ({ pathName }: any): JSX.Element => (
       width={1440}
       height={1000}
       src={`${
-        pathName === ('/about' || '/contact')
-          ? '/banner-9.webp'
-          : '/banner-9.webp'
+        pathName === ("/about" || "/contact")
+          ? "/banner-9.webp"
+          : "/banner-9.webp"
       } `}
       alt=""
       loading="lazy"
+      placeholder="blur"
+      blurDataURL="/banner.webp"
       className="absolute right-10 bottom-0 -z-50 max-h-[80%] w-[40%] object-contain"
     />
     <h1 className="z-auto  font-head text-[46px] leading-[50px]  text-gray-800 md:text-h2">

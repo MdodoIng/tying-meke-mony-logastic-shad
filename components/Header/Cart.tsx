@@ -1,9 +1,9 @@
-"use client"
-import { CloseIcon } from '@/lib/icon';
-import { productsData } from '@/lib/products';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+"use client";
+import { CloseIcon } from "@/lib/icon";
+import { productsData } from "@/lib/products";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
 
 const Cart = ({
   isCart,
@@ -15,7 +15,7 @@ const Cart = ({
   const [cartData, setCartData] = useState<object | any>();
 
   useEffect(() => {
-    const data: any = localStorage.getItem('cartItem');
+    const data: any = localStorage.getItem("cartItem");
 
     setCartData(data);
   }, [isCart]);
@@ -24,15 +24,15 @@ const Cart = ({
   return (
     <motion.div
       initial="hide"
-      animate={isCart ? 'show' : 'hide'}
+      animate={isCart ? "show" : "hide"}
       variants={{
         show: {
-          x: '0%',
-          opacity: '1',
+          x: "0%",
+          opacity: "1",
         },
         hide: {
-          x: '500%',
-          opacity: '0',
+          x: "500%",
+          opacity: "0",
         },
       }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -57,6 +57,9 @@ const Cart = ({
                 alt={productsData[0].name}
                 width={100}
                 height={100}
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="/banner.webp"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -65,10 +68,10 @@ const Cart = ({
                 {productsData[0].name}
               </h1>
               <p className="text-body text-sm text-gray-500">
-                Cateofory:{' '}
+                Cateofory:{" "}
                 <span className="text-gray-600 ">
                   {productsData[0].category}
-                </span>{' '}
+                </span>{" "}
               </p>
             </div>
             <CloseIcon className="mr-3 w-20 scale-[.4] cursor-pointer fill-gray-500 duration-300 hover:fill-red-600" />

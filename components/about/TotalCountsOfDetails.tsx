@@ -1,8 +1,8 @@
-import { ourThings } from '@/lib/data';
-import { motion } from 'framer-motion';
-import React from 'react';
-import { fadeAnim } from '@/lib/motion';
-import Image from 'next/image';
+import { ourThings } from "@/lib/data";
+import { motion } from "framer-motion";
+import React from "react";
+import { fadeAnim } from "@/lib/motion";
+import Image from "next/image";
 
 const TotalCountsOfDetails = () => {
   return (
@@ -24,6 +24,8 @@ const TotalCountsOfDetails = () => {
                 src={total.bg!}
                 alt="bg"
                 loading="lazy"
+                placeholder="blur"
+                blurDataURL={total.bg}
                 className="absolute top-0 left-0 -z-10 h-full w-full object-cover opacity-[.3]"
               />
               {total.title && (
@@ -34,11 +36,11 @@ const TotalCountsOfDetails = () => {
                   exit="hide"
                   variants={{
                     show: {
-                      y: '0%',
+                      y: "0%",
                       opacity: 1,
                     },
                     hide: {
-                      y: '55%',
+                      y: "55%",
                       opacity: 0,
                     },
                   }}

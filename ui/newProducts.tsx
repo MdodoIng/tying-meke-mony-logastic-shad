@@ -1,8 +1,8 @@
-import { productsData } from '@/lib/products';
-import RateOfProduct from '@/ui/rate';
-import { Rating } from '@/ui/rating';
-import Image from 'next/image';
-import React from 'react';
+import { productsData } from "@/lib/products";
+import RateOfProduct from "@/ui/rate";
+import { Rating } from "@/ui/rating";
+import Image from "next/image";
+import React from "react";
 
 const NewProducts = ({ limit = 1 }: number | any): JSX.Element => {
   return (
@@ -15,7 +15,7 @@ const NewProducts = ({ limit = 1 }: number | any): JSX.Element => {
           {idx <= limit && (
             <div
               className={`flex h-full w-full grid-flow-col items-center gap-2 xl:grid ${
-                idx <= limit - 1 && 'border-b'
+                idx <= limit - 1 && "border-b"
               } pb-3`}
             >
               <div className=" w-[80px] items-center justify-center p-2 xl:h-full xl:w-max">
@@ -23,6 +23,8 @@ const NewProducts = ({ limit = 1 }: number | any): JSX.Element => {
                   width={100}
                   height={500}
                   loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="/banner.webp"
                   src={item.picture}
                   className="w-full object-cover xl:w-[100px] xl:object-contain"
                   alt={item.name}
@@ -37,7 +39,7 @@ const NewProducts = ({ limit = 1 }: number | any): JSX.Element => {
                   rating={item.rating}
                   className="mx-0 mt-1 mb-1 h-5 pb-0"
                 />
-                <RateOfProduct offer={item.offer} rate={item.rate} />
+                <RateOfProduct />
               </div>
             </div>
           )}

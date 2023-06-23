@@ -1,15 +1,15 @@
-"use client"
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const initialState = {
-  name: '',
-  email: '',
-  phone: '',
-  subject: '',
-  message: '',
+  name: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: "",
 };
 
 const ContactForm = () => {
@@ -28,19 +28,19 @@ const ContactForm = () => {
     if (valueIsMoreThanZero) {
       emailjs
         .send(
-          'service_8iz45q8',
-          'template_kebta6g',
+          "service_8iz45q8",
+          "template_kebta6g",
           formValue,
-          '1Iz_fZjNb2r4dgs7d',
+          "1Iz_fZjNb2r4dgs7d"
         )
         .then(
           function (response) {
-            console.log('SUCCESS!', response.status, response.text);
+            console.log("SUCCESS!", response.status, response.text);
             setFormValue(initialState);
           },
           function (error) {
-            console.log('FAILED...', error);
-          },
+            console.log("FAILED...", error);
+          }
         );
     }
   };
@@ -54,11 +54,11 @@ const ContactForm = () => {
             exit="hide"
             variants={{
               show: {
-                y: '0%',
+                y: "0%",
                 opacity: 1,
               },
               hide: {
-                y: '55%',
+                y: "55%",
                 opacity: 0,
               },
             }}
@@ -77,11 +77,11 @@ const ContactForm = () => {
             exit="hide"
             variants={{
               show: {
-                y: '0%',
+                y: "0%",
                 opacity: 1,
               },
               hide: {
-                y: '55%',
+                y: "55%",
                 opacity: 0,
               },
             }}
@@ -100,11 +100,11 @@ const ContactForm = () => {
             exit="hide"
             variants={{
               show: {
-                y: '0%',
+                y: "0%",
                 opacity: 1,
               },
               hide: {
-                y: '55%',
+                y: "55%",
                 opacity: 0,
               },
             }}
@@ -130,11 +130,11 @@ const ContactForm = () => {
             exit="hide"
             variants={{
               show: {
-                y: '0%',
+                y: "0%",
                 opacity: 1,
               },
               hide: {
-                y: '55%',
+                y: "55%",
                 opacity: 0,
               },
             }}
@@ -188,11 +188,11 @@ const ContactForm = () => {
             exit="hide"
             variants={{
               show: {
-                y: '0%',
+                y: "0%",
                 opacity: 1,
               },
               hide: {
-                y: '55%',
+                y: "55%",
                 opacity: 0,
               },
             }}
@@ -214,11 +214,11 @@ const ContactForm = () => {
             exit="hide"
             variants={{
               show: {
-                y: '0%',
+                y: "0%",
                 opacity: 1,
               },
               hide: {
-                y: '55%',
+                y: "55%",
                 opacity: 0,
               },
             }}
@@ -240,11 +240,11 @@ const ContactForm = () => {
         exit="hide"
         variants={{
           show: {
-            y: '0%',
+            y: "0%",
             opacity: 1,
           },
           hide: {
-            y: '55%',
+            y: "55%",
             opacity: 0,
           },
         }}
@@ -258,8 +258,10 @@ const ContactForm = () => {
         <Image
           width={700}
           height={500}
-          loading="lazy"
           src="/contact.png"
+          loading="lazy"
+          placeholder="blur"
+          blurDataURL="/banner.webp"
           alt=""
           className="h-full w-full object-cover "
         />

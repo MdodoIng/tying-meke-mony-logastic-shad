@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import React from "react";
 
 const OfferBoxInCollection = ({ className }: { className?: string }) => {
   return (
@@ -15,6 +15,8 @@ const OfferBoxInCollection = ({ className }: { className?: string }) => {
         width={1440}
         height={500}
         loading="lazy"
+        placeholder="blur"
+        blurDataURL="/banner.webp"
         src="https://mailtrap.io/wp-content/uploads/2020/10/nbsp-and-HTML-Space-Challenges-and-Tricks_small-1.png"
         alt=""
         className="absolute bottom-0 -right-[30%] -z-10 h-full object-cover"

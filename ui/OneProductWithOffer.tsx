@@ -1,12 +1,12 @@
-"use client"
-import { Icon, Love, Spinner, View } from '@/lib/icon';
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+import { Icon, Love, Spinner, View } from "@/lib/icon";
+import Image from "next/image";
+import Link from "next/link";
 
-import React from 'react';
-import { ButtonAdd, ButtonAddToCart } from './button';
-import RateOfProduct from './rate';
-import { Rating } from './rating';
+import React from "react";
+import { ButtonAdd, ButtonAddToCart } from "./button";
+import RateOfProduct from "./rate";
+import { Rating } from "./rating";
 
 type Props = {
   id?: React.Key;
@@ -43,8 +43,8 @@ function OneProductWithOffer({
 
   categorySlug,
 }: Props): any {
-  const addBtn = buttonStyle === 'add';
-  const addToCartBtn = buttonStyle === 'add-to-cart';
+  const addBtn = buttonStyle === "add";
+  const addToCartBtn = buttonStyle === "add-to-cart";
   const [windowWidth, setWindowWidth] = React.useState<number | any>();
 
   const handleCart = () => {
@@ -56,14 +56,14 @@ function OneProductWithOffer({
 
   React.useEffect(() => {
     if (typeof window !== undefined) {
-      window.addEventListener('resize', () => {
+      window.addEventListener("resize", () => {
         setWindowWidth(window.innerWidth);
       });
 
       setWindowWidth(window.innerWidth);
 
-      return window.removeEventListener('resize', () =>
-        setWindowWidth(windowWidth),
+      return window.removeEventListener("resize", () =>
+        setWindowWidth(windowWidth)
       );
     }
   }, []);
@@ -79,17 +79,18 @@ function OneProductWithOffer({
       )} */}
       <div
         className={`relative flex  h-[233px]  w-full items-center justify-center ${
-          tags?.split(',').map((item: any) => item) === 'vegetable'
-            ? 'bg-gray-100'
-            : 'bg-white'
+          tags?.split(",").map((item: any) => item) === "vegetable"
+            ? "bg-gray-100"
+            : "bg-white"
         } ${classNameForPic}`}
       >
         <Link aria-label="Read more" href={`/${categorySlug}/${name}`}>
           <Image
             width={1440}
             height={1000}
-            layout="responsive"
             loading="lazy"
+            placeholder="blur"
+            blurDataURL="/banner.webp"
             src={
               bacPicture
                 ? mouseOver === id && windowWidth > 768
@@ -98,7 +99,7 @@ function OneProductWithOffer({
                 : picture
             }
             onMouseOver={() => setMouseOver(id)}
-            onMouseLeave={() => setMouseOver('')}
+            onMouseLeave={() => setMouseOver("")}
             alt=""
             className="h-full w-full object-contain"
           />
@@ -121,7 +122,7 @@ function OneProductWithOffer({
       </span>
       <div
         className={`mx-5 mb-4 flex flex-row flex-wrap items-center md:mb-5 ${
-          addBtn ? 'justify-between' : 'justify-start'
+          addBtn ? "justify-between" : "justify-start"
         }`}
       >
         {/* <RateOfProduct offer={offer} rate={rate} /> */}
@@ -150,14 +151,14 @@ const OneProductLeftPicRightDetail = ({
 
   React.useEffect(() => {
     if (typeof window !== undefined) {
-      window.addEventListener('resize', () => {
+      window.addEventListener("resize", () => {
         setWindowWidth(window.innerWidth);
       });
 
       setWindowWidth(window.innerWidth);
 
-      return window.removeEventListener('resize', () =>
-        setWindowWidth(windowWidth),
+      return window.removeEventListener("resize", () =>
+        setWindowWidth(windowWidth)
       );
     }
   }, []);
@@ -170,9 +171,9 @@ const OneProductLeftPicRightDetail = ({
             <div className="flex h-full w-full flex-row items-center justify-center gap-4 transition-all duration-300 hover:-translate-y-1 ">
               <div
                 className={`h-[93px] w-[93px] flex-[40%] items-center justify-center overflow-hidden rounded-md p-1 ${
-                  item.tags === 'vegetable' || 'organic'
-                    ? 'bg-gray-100'
-                    : 'bg-white'
+                  item.tags === "vegetable" || "organic"
+                    ? "bg-gray-100"
+                    : "bg-white"
                 }`}
               >
                 <Link
@@ -183,8 +184,9 @@ const OneProductLeftPicRightDetail = ({
                     width={1440}
                     height={1000}
                     loading="lazy"
+                    placeholder="blur"
+                    blurDataURL="/banner.webp"
                     src={item.picture}
-                    layout="responsive"
                     className="h-full w-full object-cover"
                     alt={item.name}
                   />

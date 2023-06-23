@@ -1,51 +1,51 @@
-"use client"
-import { TextCategoryMob, TextCategory } from '@/ui/TextCategory';
-import React from 'react';
-import { ButtonShopNow } from '@/ui/button';
-import DailyBestSellerInOneLine from './inOneLine/DailyBestSellerInOneLine';
-import { dailyBestSellerCategory } from '@/lib/data';
-import Image from 'next/image';
-import { OneProductWithOffer } from '@/ui/OneProductWithOffer';
+"use client";
+import { TextCategoryMob, TextCategory } from "@/ui/TextCategory";
+import React from "react";
+import { ButtonShopNow } from "@/ui/button";
+import DailyBestSellerInOneLine from "./inOneLine/DailyBestSellerInOneLine";
+import { dailyBestSellerCategory } from "@/lib/data";
+import Image from "next/image";
+import { OneProductWithOffer } from "@/ui/OneProductWithOffer";
 import {
   dailyBestSellerProducts,
   popularProductsData,
-} from '@/lib/productsInDeferentCategory';
-import { productsData } from '@/lib/products';
+} from "@/lib/productsInDeferentCategory";
+import { productsData } from "@/lib/products";
 
 const DailyBestSeller = (): any => {
   const [isSelectedCatN, setIsSelectedCatN] = React.useState(
-    dailyBestSellerCategory[0].name,
+    dailyBestSellerCategory[0].name
   );
   const [toggleOn, setToggleOn] = React.useState<boolean | any>(false);
 
-  const [mouseOver, setMouseOver] = React.useState<string | any>('');
+  const [mouseOver, setMouseOver] = React.useState<string | any>("");
   const [windowWidth, setWindowWidth] = React.useState<number | any>();
   const [isProductData, setIsProductData] = React.useState<any[]>(
-    dailyBestSellerProducts,
+    dailyBestSellerProducts
   );
 
   React.useEffect(() => {
     if (typeof window !== undefined) {
-      window.addEventListener('resize', () => {
+      window.addEventListener("resize", () => {
         setWindowWidth(window.innerWidth);
       });
 
       setWindowWidth(window.innerWidth);
 
-      return window.removeEventListener('resize', () =>
-        setWindowWidth(window.innerWidth),
+      return window.removeEventListener("resize", () =>
+        setWindowWidth(window.innerWidth)
       );
     }
   }, []);
 
   React.useEffect(() => {
-    if (isSelectedCatN === 'Featured')
+    if (isSelectedCatN === "Featured")
       return setIsProductData(dailyBestSellerProducts);
-    else if (isSelectedCatN === 'Popular')
+    else if (isSelectedCatN === "Popular")
       return setIsProductData(popularProductsData);
-    else if (isSelectedCatN === 'New added')
+    else if (isSelectedCatN === "New added")
       return setIsProductData(
-        productsData.sort((a, b) => (b.id >= a.id ? 1 : -1)),
+        productsData.sort((a, b) => (b.id >= a.id ? 1 : -1))
       );
   }, [isSelectedCatN]);
 
@@ -71,7 +71,7 @@ const DailyBestSeller = (): any => {
               onClick={() => setToggleOn(!toggleOn)}
               className="cursor-pointer font-head text-base leading-3 text-gray-800 md:text-base"
             >
-              {isSelectedCatN}{' '}
+              {isSelectedCatN}{" "}
               <i className="fa-solid fa-chevron-down relative ml-2 text-gray-800 duration-700" />
             </p>
             {toggleOn && (
@@ -93,6 +93,8 @@ const DailyBestSeller = (): any => {
             src="/bananaleaf.jpeg"
             alt=""
             loading="lazy"
+            placeholder="blur"
+            blurDataURL="/banner.webp"
             width={200}
             className=" absolute inset-0 -z-10 h-full w-full bg-gray-500 object-cover opacity-[.9] "
           />
