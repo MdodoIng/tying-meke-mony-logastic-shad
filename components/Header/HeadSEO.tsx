@@ -13,7 +13,7 @@ const HeadSEO = ({ site = {}, page = {}, schema }: any) => {
         name="description"
         content="Discover our top-quality exports and unparalleled customer service. As a trusted exporting company, we pride ourselves on delivering excellence in every shipment. Browse our extensive range of products today and experience the difference."
       />
-      <link rel="icon" href="redbg.svg" sizes="any" />
+      <link rel="icon" href="micon.png" sizes="any" />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
