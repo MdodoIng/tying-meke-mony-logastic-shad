@@ -79,7 +79,7 @@ function Header(): any {
               height={100}
               loading="lazy"
               alt=""
-              src="/namegreen.webp"
+              src="/header.webp"
               className="h-[39px] w-full shrink-0  object-cover"
             />
           </Link>
@@ -159,7 +159,7 @@ function Header(): any {
               height={100}
               alt=""
               loading="lazy"
-              src="/namegreen.webp"
+              src="/header.webp"
               className=" h-[35px] w-full shrink-0 cursor-pointer object-contain"
             />
           </Link>

@@ -8,7 +8,7 @@ const ProductEachDetail = (product: any) => {
   const [cartCount, setCartCount] = React.useState<number>(1);
   return (
     <div className="ml-5 flex w-full flex-col gap-5 ">
-      <span className="w-max rounded-md bg-emerald-200 px-4 py-1 font-head text-sm  text-emerald-600">
+      <span className="w-max rounded-md bg-emerald-200 px-4 py-1 font-head text-sm  text-[#5E665D]">
         sale on
       </span>
       <h1 className="max-w-[90%] font-head text-h2 leading-[50px] text-gray-700 ">
